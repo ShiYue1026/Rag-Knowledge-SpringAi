@@ -1,0 +1,278 @@
+25-05-24.17:33:55.656 [main            ] INFO  RagKnowledgeAppApplication - Starting RagKnowledgeAppApplication using Java 17.0.5 with PID 41496 (F:\rag-knowledge\rag-knowledge-app\target\classes started by shiyu in F:\rag-knowledge)
+25-05-24.17:33:55.659 [main            ] INFO  RagKnowledgeAppApplication - The following 1 profile is active: "dev"
+25-05-24.17:33:56.832 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-05-24.17:33:56.836 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-05-24.17:33:56.879 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+25-05-24.17:33:57.926 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8090 (http)
+25-05-24.17:33:57.952 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-05-24.17:33:57.954 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-05-24.17:33:57.955 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-05-24.17:33:58.041 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-05-24.17:33:58.041 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2076 ms
+25-05-24.17:33:58.487 [main            ] INFO  Version                - Redisson 3.44.0
+25-05-24.17:33:59.035 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:33:59.092 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:34:00.186 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/autoconfigure/vectorstore/pgvector/PgVectorStoreAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vectorStore' parameter 1: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingClient' available: expected single matching bean but found 2: ollamaEmbeddingClient,openAiEmbeddingClient
+25-05-24.17:34:00.203 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-05-24.17:34:00.216 [main            ] INFO  ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+25-05-24.17:34:00.236 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of method vectorStore in org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration required a single bean, but 2 were found:
+	- ollamaEmbeddingClient: defined by method 'ollamaEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/ollama/OllamaAutoConfiguration.class]
+	- openAiEmbeddingClient: defined by method 'openAiEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/openai/OpenAiAutoConfiguration.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+25-05-24.17:35:17.678 [main            ] INFO  RagKnowledgeAppApplication - Starting RagKnowledgeAppApplication using Java 17.0.5 with PID 32868 (F:\rag-knowledge\rag-knowledge-app\target\classes started by shiyu in F:\rag-knowledge)
+25-05-24.17:35:17.680 [main            ] INFO  RagKnowledgeAppApplication - The following 1 profile is active: "dev"
+25-05-24.17:35:18.886 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-05-24.17:35:18.889 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-05-24.17:35:18.921 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+25-05-24.17:35:19.878 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8090 (http)
+25-05-24.17:35:19.906 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-05-24.17:35:19.907 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-05-24.17:35:19.908 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-05-24.17:35:19.996 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-05-24.17:35:19.997 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2019 ms
+25-05-24.17:35:20.381 [main            ] INFO  Version                - Redisson 3.44.0
+25-05-24.17:35:20.932 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:35:20.987 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:35:22.162 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/autoconfigure/vectorstore/pgvector/PgVectorStoreAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vectorStore' parameter 1: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingClient' available: expected single matching bean but found 2: ollamaEmbeddingClient,openAiEmbeddingClient
+25-05-24.17:35:22.191 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-05-24.17:35:22.208 [main            ] INFO  ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+25-05-24.17:35:22.234 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of method vectorStore in org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration required a single bean, but 2 were found:
+	- ollamaEmbeddingClient: defined by method 'ollamaEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/ollama/OllamaAutoConfiguration.class]
+	- openAiEmbeddingClient: defined by method 'openAiEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/openai/OpenAiAutoConfiguration.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+25-05-24.17:43:16.259 [main            ] INFO  RagKnowledgeAppApplication - Starting RagKnowledgeAppApplication using Java 17.0.5 with PID 9568 (F:\rag-knowledge\rag-knowledge-app\target\classes started by shiyu in F:\rag-knowledge)
+25-05-24.17:43:16.262 [main            ] INFO  RagKnowledgeAppApplication - The following 1 profile is active: "dev"
+25-05-24.17:43:17.547 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-05-24.17:43:17.550 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-05-24.17:43:17.583 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+25-05-24.17:43:18.430 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8090 (http)
+25-05-24.17:43:18.452 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-05-24.17:43:18.454 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-05-24.17:43:18.457 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-05-24.17:43:18.545 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-05-24.17:43:18.545 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1957 ms
+25-05-24.17:43:19.316 [main            ] INFO  Version                - Redisson 3.44.0
+25-05-24.17:43:19.808 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:43:19.853 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:43:20.513 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/autoconfigure/vectorstore/pgvector/PgVectorStoreAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vectorStore' parameter 1: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingClient' available: expected single matching bean but found 2: ollamaEmbeddingClient,openAiEmbeddingClient
+25-05-24.17:43:20.532 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-05-24.17:43:20.543 [main            ] INFO  ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+25-05-24.17:43:20.561 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of method vectorStore in org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration required a single bean, but 2 were found:
+	- ollamaEmbeddingClient: defined by method 'ollamaEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/ollama/OllamaAutoConfiguration.class]
+	- openAiEmbeddingClient: defined by method 'openAiEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/openai/OpenAiAutoConfiguration.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+25-05-24.17:44:50.075 [main            ] INFO  RagKnowledgeAppApplication - Starting RagKnowledgeAppApplication using Java 17.0.5 with PID 28748 (F:\rag-knowledge\rag-knowledge-app\target\classes started by shiyu in F:\rag-knowledge)
+25-05-24.17:44:50.077 [main            ] INFO  RagKnowledgeAppApplication - The following 1 profile is active: "dev"
+25-05-24.17:44:51.186 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-05-24.17:44:51.190 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-05-24.17:44:51.228 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+25-05-24.17:44:52.042 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8090 (http)
+25-05-24.17:44:52.062 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-05-24.17:44:52.065 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-05-24.17:44:52.065 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-05-24.17:44:52.196 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-05-24.17:44:52.197 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1862 ms
+25-05-24.17:44:52.982 [main            ] INFO  Version                - Redisson 3.44.0
+25-05-24.17:44:53.488 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:44:53.540 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:44:54.222 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/autoconfigure/vectorstore/pgvector/PgVectorStoreAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vectorStore' parameter 1: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingClient' available: expected single matching bean but found 2: ollamaEmbeddingClient,openAiEmbeddingClient
+25-05-24.17:44:54.244 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-05-24.17:44:54.260 [main            ] INFO  ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+25-05-24.17:44:54.286 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of method vectorStore in org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration required a single bean, but 2 were found:
+	- ollamaEmbeddingClient: defined by method 'ollamaEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/ollama/OllamaAutoConfiguration.class]
+	- openAiEmbeddingClient: defined by method 'openAiEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/openai/OpenAiAutoConfiguration.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+25-05-24.17:54:06.988 [main            ] INFO  RagKnowledgeAppApplication - Starting RagKnowledgeAppApplication using Java 17.0.5 with PID 36068 (F:\rag-knowledge\rag-knowledge-app\target\classes started by shiyu in F:\rag-knowledge)
+25-05-24.17:54:06.991 [main            ] INFO  RagKnowledgeAppApplication - The following 1 profile is active: "dev"
+25-05-24.17:54:08.480 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-05-24.17:54:08.486 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-05-24.17:54:08.533 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+25-05-24.17:54:09.514 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8090 (http)
+25-05-24.17:54:09.543 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-05-24.17:54:09.547 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-05-24.17:54:09.547 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-05-24.17:54:09.644 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-05-24.17:54:09.645 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2193 ms
+25-05-24.17:54:10.582 [main            ] INFO  Version                - Redisson 3.44.0
+25-05-24.17:54:11.182 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:54:11.236 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.17:54:12.162 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/autoconfigure/vectorstore/pgvector/PgVectorStoreAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vectorStore' parameter 1: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingClient' available: expected single matching bean but found 2: ollamaEmbeddingClient,openAiEmbeddingClient
+25-05-24.17:54:12.190 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-05-24.17:54:12.205 [main            ] INFO  ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+25-05-24.17:54:12.229 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of method vectorStore in org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration required a single bean, but 2 were found:
+	- ollamaEmbeddingClient: defined by method 'ollamaEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/ollama/OllamaAutoConfiguration.class]
+	- openAiEmbeddingClient: defined by method 'openAiEmbeddingClient' in class path resource [org/springframework/ai/autoconfigure/openai/OpenAiAutoConfiguration.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+25-05-24.18:11:35.766 [main            ] INFO  RagKnowledgeAppApplication - Starting RagKnowledgeAppApplication using Java 17.0.5 with PID 39232 (F:\rag-knowledge\rag-knowledge-app\target\classes started by shiyu in F:\rag-knowledge)
+25-05-24.18:11:35.770 [main            ] INFO  RagKnowledgeAppApplication - The following 1 profile is active: "dev"
+25-05-24.18:11:36.988 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-05-24.18:11:36.995 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-05-24.18:11:37.041 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+25-05-24.18:11:37.996 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8090 (http)
+25-05-24.18:11:38.030 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-05-24.18:11:38.033 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-05-24.18:11:38.033 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-05-24.18:11:38.147 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-05-24.18:11:38.148 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2063 ms
+25-05-24.18:11:38.770 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'pgVectorStore' defined in class path resource [com/shiyue/config/OllamaConfig.class]: Unsatisfied dependency expressed through method 'pgVectorStore' parameter 2: No qualifying bean of type 'org.springframework.ai.openai.api.OpenAiApi' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+25-05-24.18:11:38.774 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-05-24.18:11:38.797 [main            ] INFO  ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+25-05-24.18:11:38.817 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 2 of method pgVectorStore in com.shiyue.config.OllamaConfig required a bean of type 'org.springframework.ai.openai.api.OpenAiApi' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.ai.openai.api.OpenAiApi' in your configuration.
+
+25-05-24.18:14:46.931 [main            ] INFO  RagKnowledgeAppApplication - Starting RagKnowledgeAppApplication using Java 17.0.5 with PID 32708 (F:\rag-knowledge\rag-knowledge-app\target\classes started by shiyu in F:\rag-knowledge)
+25-05-24.18:14:46.933 [main            ] INFO  RagKnowledgeAppApplication - The following 1 profile is active: "dev"
+25-05-24.18:14:47.797 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-05-24.18:14:47.802 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-05-24.18:14:47.865 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+25-05-24.18:14:48.458 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8090 (http)
+25-05-24.18:14:48.479 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-05-24.18:14:48.482 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-05-24.18:14:48.483 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-05-24.18:14:48.626 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-05-24.18:14:48.626 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1630 ms
+25-05-24.18:14:49.630 [main            ] INFO  Version                - Redisson 3.44.0
+25-05-24.18:14:50.143 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.18:14:50.196 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.18:14:51.217 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-05-24.18:14:51.234 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8090 (http) with context path ''
+25-05-24.18:14:51.249 [main            ] INFO  RagKnowledgeAppApplication - Started RagKnowledgeAppApplication in 5.081 seconds (process running for 6.441)
+25-05-24.18:17:52.259 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-05-24.18:17:52.260 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-05-24.18:17:52.261 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-05-24.18:23:50.737 [main            ] INFO  RagKnowledgeAppApplication - Starting RagKnowledgeAppApplication using Java 17.0.5 with PID 37792 (F:\rag-knowledge\rag-knowledge-app\target\classes started by shiyu in F:\rag-knowledge)
+25-05-24.18:23:50.741 [main            ] INFO  RagKnowledgeAppApplication - The following 1 profile is active: "dev"
+25-05-24.18:23:51.471 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-05-24.18:23:51.474 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-05-24.18:23:51.529 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+25-05-24.18:23:52.176 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8090 (http)
+25-05-24.18:23:52.188 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+25-05-24.18:23:52.190 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-05-24.18:23:52.190 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-05-24.18:23:52.274 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-05-24.18:23:52.275 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1481 ms
+25-05-24.18:23:53.085 [main            ] INFO  Version                - Redisson 3.44.0
+25-05-24.18:23:53.568 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.18:23:53.622 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 192.168.88.128/192.168.88.128:16379
+25-05-24.18:23:54.486 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+25-05-24.18:23:54.504 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8090 (http) with context path ''
+25-05-24.18:23:54.522 [main            ] INFO  RagKnowledgeAppApplication - Started RagKnowledgeAppApplication in 4.397 seconds (process running for 5.175)
